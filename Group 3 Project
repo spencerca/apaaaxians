@@ -1,0 +1,30 @@
+using System;
+
+namespace Group_3_Project
+{
+    class Apaxians
+    {
+        static void Main(string[] args)
+        {
+            //Store input
+            string originalname = Console.ReadLine();
+
+            //Start to create editied name
+            string editedname = originalname[0].ToString();
+            char currentletter = originalname[0];
+
+            //Check originalname to remove duplicate letters next to each other
+            for (int i = 0 ; i < originalname.Length; i++)
+            {
+                char letter = originalname[i];
+                if (letter != currentletter)
+                {
+                    editedname += letter;
+                }
+                currentletter = letter;
+            }
+            //Print editedname
+            Console.WriteLine(editedname);
+        }
+    }
+}
